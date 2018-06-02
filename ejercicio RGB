@@ -1,1 +1,32 @@
-
+//Rojo
+var color_rojo = [255,0,0]
+console.log('Rojo: '+'('+color_rojo[0]+','+color_rojo[1]+','+color_rojo[2]+')');
+//Verde
+var color_verde = [0,255,0]
+console.log('Verde: '+'('+color_verde[0]+','+color_verde[1]+','+color_verde[2]+')');
+//Azul
+var color_azul = [0,0,255]
+console.log('Azul: '+'('+color_azul[0]+','+color_azul[1]+','+color_azul[2]+')');
+//Blanco
+var color_blanco = [255,255,255]
+console.log('Blanco: '+'('+color_blanco[0]+','+color_blanco[1]+','+color_blanco[2]+')');
+//Negro
+var color_negro = [0,0,0]
+console.log('Negro: '+'('+color_negro[0]+','+color_negro[1]+','+color_negro[2]+')');
+//Magenta
+var color_magenta = [255,0,255]
+console.log('Magenta: '+'('+color_magenta[0]+','+color_magenta[1]+','+color_magenta[2]+')');
+//Suma de magenta y rojo
+var color_1 = color_rojo
+var color_2 = color_magenta
+var color_3 = [0,0,0]
+if (color_1[0] + color_2[0] <= 255){
+  color_3[0] = color_1[0] + color_2[0];}
+               else {color_3[0] = 255;}
+if (color_1[1] + color_2[1] <= 255){
+  color_3[1] = color_1[1] + color_2[1];}
+               else {color_3[1] = 255;}
+if (color_1[2] + color_2[2] <= 255){
+  color_3[2] = color_1[2] + color_2[2];}
+               else {color_3[2] = 255;}           
+console.log('Combinación de rojo y magenta: '+'('+color_3[0]+','+color_3[1]+','+color_3[2]+')');
