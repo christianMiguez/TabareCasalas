@@ -1,0 +1,30 @@
+//Producción del lunes
+var lunes = [['Productor A', 500],['Productor B', 250],['Productor C', 455]];
+//Producción del martes
+var martes = [['Productor A', 300],['Productor B', 520],['Productor C', 125]];
+//Producción del miercoles
+var miercoles = [['Productor A', 200],['Productor B', 460],['Productor C', 354]];
+//Producción del jueves
+var jueves = [['Productor A', 100],['Productor B', 160],['Productor C', 245]];
+//Producción del viernes
+var viernes = [['Productor A', 150],['Productor B', 260],['Productor C', 300]];
+
+var semana = [['Productor A', 0, 0, 0], ['Productor B', 0, 0, 0], ['Productor C', 0, 0, 0]];
+
+for (i=0; i<=2; i=i+1){
+  semana[i][1]=(lunes[i][1]+martes[i][1]+miercoles[i][1]+jueves[i][1]+viernes[i][1]);
+  semana[i][2]=(lunes[i][1]+martes[i][1]+miercoles[i][1]+jueves[i][1]+viernes[i][1])/5;
+};
+console.log('La prouccion esta semana fue:'+'\n' +semana[0][0]+'='+semana[0][1]+' litros'+'\n'+semana[1][0]+'='+semana[1][1]+' litros'+'\n'+semana[2][0]+'='+semana[2][1]+' litros');
+console.log('El promedio diario fue :'+'\n' +semana[0][0]+'='+semana[0][2]+' litros'+'\n'+semana[1][0]+'='+semana[1][2]+' litros'+'\n'+semana[2][0]+'='+semana[2][2]+' litros');
+
+for (i=0; i<=2; i=i+1) {
+  if (semana[i][1]<1500*0.8) {
+    console.log('Los productores que no llegaron a la cuota semana son: '+'\n'+litros_semana[i][0])
+  } else { 
+  semana[i][3]=1
+}
+};
+if (semana[0][3]+semana[1][3]+semana[2][3]) {
+  console.log('Todos los productores cumplieron la cuota esta semana')
+};
