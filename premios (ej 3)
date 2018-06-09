@@ -1,0 +1,15 @@
+
+var nacimiento = [1987, 2005, 1997, 2000, 1970, 2002, 2004, 1999, 1980, 1970];
+var nombre = ['Miguel Gomez', 'Daniela Cardozo', 'Jorge Petit', 'Juan Vasquez', 'Anabel Garrido', 'Florencia Michel', 'Ricardo Rodriguez', 'Manuel Farrell', 'Adelia Gil', 'Alejandro Smith'];
+var esSeguidor = [true, false, false, false, true, true, false, true, false, false];
+var premiosi=[]
+var premiono=[]
+for (i=0; i<=9; i=i+1) {
+  if (2018-nacimiento[i]>30 && esSeguidor[i]===true){
+   premiosi[premiosi.length]=nombre[i]
+  } else {
+    premiono[premiono.length]=nombre[i]
+  }
+  }
+console.log('Merecen premio: '+premiosi)
+console.log('No merecen premio: '+premiono)
