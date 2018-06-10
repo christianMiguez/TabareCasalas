@@ -14,17 +14,17 @@ var semana = [['Productor A', 0, 0, 0], ['Productor B', 0, 0, 0], ['Productor C'
 for (i=0; i<=2; i=i+1){
   semana[i][1]=(lunes[i][1]+martes[i][1]+miercoles[i][1]+jueves[i][1]+viernes[i][1]);
   semana[i][2]=(lunes[i][1]+martes[i][1]+miercoles[i][1]+jueves[i][1]+viernes[i][1])/5;
+  if (semana[i][1]<1500*0.8) {
+    semana[i][3]=1
+  }
 };
 console.log('La prouccion esta semana fue:'+'\n' +semana[0][0]+'='+semana[0][1]+' litros'+'\n'+semana[1][0]+'='+semana[1][1]+' litros'+'\n'+semana[2][0]+'='+semana[2][1]+' litros');
 console.log('El promedio diario fue :'+'\n' +semana[0][0]+'='+semana[0][2]+' litros'+'\n'+semana[1][0]+'='+semana[1][2]+' litros'+'\n'+semana[2][0]+'='+semana[2][2]+' litros');
-
 for (i=0; i<=2; i=i+1) {
-  if (semana[i][1]<1500*0.8) {
-    console.log('Los productores que no llegaron a la cuota semana son: '+'\n'+litros_semana[i][0])
-  } else { 
-  semana[i][3]=1
-}
+  if (semana[i][3]!=0) {
+    console.log(semana[i][0]+' no llego a la cuota esta semana')
+  }
 };
-if (semana[0][3]+semana[1][3]+semana[2][3]>0) {
+if (semana[0][3]+semana[1][3]+semana[2][3]==0) {
   console.log('Todos los productores cumplieron la cuota esta semana')
 };
