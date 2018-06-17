@@ -1,0 +1,20 @@
+var factura = [
+['Pendrive 16GB', 230],
+['Memoria MicroSD 8GB', 150],
+['Disco Duro Externo 2TB', 3300],
+['Pack de 100 DVDs virgenes', 500],
+['Router Inalambrico 300Mbps', 750],
+['Impresora Laser comun', 2500],
+['Teclado común para PC', 120],
+['Mouse optico USB', 130],
+['Monitor LCD 19 pulgadas', 2100],
+['Placa de video 1Gb DDR3', 2050]
+];
+var total = 0;
+for (i=0; i<factura.length; i++) {
+  total = total + factura[i][1]
+  console.log(factura[i][0]+' - '+factura[i][1]+' - '+(factura[i][1]*0.22))
+};
+console.log('Total sin IVA: '+total);
+console.log('IVA: '+(total*0.22));
+console.log('Total con iva incluido: '+(total+(total*0.22)));
