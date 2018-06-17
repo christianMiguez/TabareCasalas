@@ -1,0 +1,15 @@
+var bolillero = []
+var oro5 = []
+for (i=0; i<48; i++) {
+  bolillero[i]=i+1
+}
+function bolilla (limite_superior, limite_inferior) {
+  return bolillero[Math.floor(Math.random() * (limite_superior - limite_inferior) + limite_inferior)]
+}
+for (i=0; i<6; i++) {
+    bolilla_nueva = bolilla((47-i), 0)
+    oro5[i] = bolilla_nueva
+    bolillero.splice(bolillero.indexOf(bolilla_nueva), 1)
+   }
+console.log('Numeros sorteados: '+oro5[0]+', '+oro5[1]+', '+oro5[2]+', '+oro5[3]+', '+oro5[4])
+console.log('Bolilla extra: '+oro5[5])
