@@ -1,0 +1,28 @@
+var recetas = [{
+  nombre: 'Pizza',
+  ingredientes: ['harina', 'agua', 'aceite', 'levadura', 'sal'],
+  coccion: 'cocido'
+}, {
+  nombre: 'Pascualina',
+  ingredientes: ['harina', 'agua', 'aceite', 'levadura', 'espinaca', 'huevo', 'sal'],
+  coccion: 'cocido'
+}, {
+  nombre: 'Ensalada mixta',
+  ingredientes: ['tomate', 'lechuga', 'zanahoria', 'cebolla', 'huevo', 'atun', 'aceite'],
+  coccion: 'frio'
+}];
+var ingrediente = prompt('Ingrese el ingrediente')
+var coccion = prompt('Ingrese metodo de coccion (cocido o frio)')
+var busqueda = [ingrediente, coccion]
+for (i=0; i<recetas.length; i++) {
+  if (recetas[i].coccion==busqueda[1]) {
+       for (j=0; j<10; j++) {
+         if (recetas[i].ingredientes[j]==busqueda[0]) {
+           console.log('Nombre del plato: '+recetas[i].nombre)
+           console.log('Ingredientes: '+recetas[i].ingredientes)
+           console.log('Tipo de coccion: '+recetas[i].coccion)
+           console.log('\n')
+         }
+       }
+      }
+}
